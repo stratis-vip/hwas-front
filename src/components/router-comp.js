@@ -8,6 +8,14 @@ import {
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa6";
 import Title from "./title";
+import Home from "./home";
+import Rules from "./rules"
+import Gwar from "./g-war"
+import Guides from "./guides";
+import Program from "./program";
+import Users from './users'
+import Communication from "./comunication"
+import CTeams from "./c-teams";
 
 const RouterComponent = () => {
     const [open, setOpen] = useState(true)
@@ -37,9 +45,11 @@ const RouterComponent = () => {
                     <ToLink path={"/rules"} title="Rules" />
                     <ToLink path={"/guild-war"} title="Champions" />
                     <ToLink path={"/guides"} title="Guides" />
+                    <ToLink path={"c-teams"} title="Counters" />
                     <ToLink path={"/program"} title="War Schedule" />
                     <ToLink path={"/users"} title="Time Table" />
                     <ToLink path={"/communication"} title="Communication" />
+
                 </div>
             </div>
 
@@ -48,11 +58,12 @@ const RouterComponent = () => {
                 <Route path="program" element={<Program />} />
                 <Route path="users" element={<Users />} />
                 <Route path="rules" element={<Rules />} />
-                <Route path="adventures/:aid" element={<Adventures />} />
+                {/* <Route path="adventures/:aid" element={<Adventures />} /> */}
                 <Route path="guides" element={<Guides />} />
-                <Route path="edit" element={<Edit />} />
+                {/* <Route path="edit" element={<Edit />} /> */}
                 <Route path="guild-war" element={<Gwar />} />
                 <Route path="communication" element={<Communication />} />
+                <Route path="c-teams" element={<CTeams />} />
             </Routes>
 
             <Outlet />
@@ -62,40 +73,18 @@ const RouterComponent = () => {
 
 export default RouterComponent;
 
-const Home = () => {
-    return (<>Home</>)
-}
+// const Wars = () => {
+//     return (<>Wars</>)
+// }
+// const Adventures = () => {
+//     return (<>Adventures</>)
+// }
 
 
-const Program = () => {
-    return (<>Program</>)
-}
-const Users = () => {
-    return (<>Users</>)
-}
-const Rules = () => {
-    return (<>Rules</>)
-}
 
-
-const Wars = () => {
-    return (<>Wars</>)
-}
-const Adventures = () => {
-    return (<>Adventures</>)
-}
-const Communication = () => {
-    return (<>Communication</>)
-}
-const Guides = () => {
-    return (<>Guides</>)
-}
-const Gwar = () => {
-    return (<>Gwar</>)
-}
-const Edit = () => {
-    return (<>Edit</>)
-}
+// const Edit = () => {
+//     return (<>Edit</>)
+// }
 
 const ToLink = ({ path, title }) => {
     return (
