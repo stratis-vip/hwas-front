@@ -16,7 +16,7 @@ import Program from "./program";
 import Users from './users'
 import Communication from "./comunication"
 import CTeams from "./c-teams";
-
+import Help from "./help";
 const RouterComponent = () => {
     const [open, setOpen] = useState(true)
     return (
@@ -64,6 +64,7 @@ const RouterComponent = () => {
                 <Route path="guild-war" element={<Gwar />} />
                 <Route path="communication" element={<Communication />} />
                 <Route path="c-teams" element={<CTeams />} />
+                <Route path="help" element={<Help />} />
             </Routes>
 
             <Outlet />

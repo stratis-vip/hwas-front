@@ -835,6 +835,30 @@ export const allUsers = [
 			left: null
 		},
 	},
+	{
+		id: 4835732,
+		name: "Soul Crusher",
+		active: true,
+		isArchived: false,
+		timeZone: "Etc/UTC",
+		notes: null,
+		dates: {
+			joined: "20241215",
+			left: null
+		},
+	},
+	{
+		id: 4588840,
+		name: "vengeful 13",
+		active: true,
+		isArchived: false,
+		timeZone: "Etc/UTC",
+		notes: null,
+		dates: {
+			joined: "20241228",
+			left: null
+		},
+	},
 ];
 
 const sortF = (a, b) => {
