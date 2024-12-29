@@ -1,6 +1,7 @@
 {
   "name": "my-app",
-  "version": "2.0.2",
+  "version": "2.0.22",
+  "league": "silver",
   "private": true,
   "dependencies": {
     "@tailwindcss/forms": "^0.5.9",

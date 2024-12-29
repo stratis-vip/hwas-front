@@ -1,13 +1,15 @@
 import { bronze } from "../data/bronze";
 import { silver } from "../data/silver";
 import { getOpponents } from "../lib";
+import json from '../../package.json'
+const gold = json.league.toLowerCase() === "gold"
 
 export default function Rules() {
   console.log(silver, bronze);
   const days = ['mon', 'tue', 'wed', 'thu', 'fri']
   return (
     <div className="text-primary font-bold sm:mt-10 mt-3 mx-2">
-      <div className="flex flex-col sm:items-center sm:mt-10">
+      {gold ? <div className="flex flex-col sm:items-center sm:mt-10">
         <h3 className="text-xl sm:text-3xl center sm:mb-5 mb-2" > Gold League</h3>
         <div className="">
           <div className="text-black">
@@ -20,6 +22,8 @@ export default function Rules() {
           </div>
         </div>
       </div>
+        : null
+      }
       <div className="flex flex-col sm:items-center sm:mt-10">
         <h3 className="text-xl sm:text-3xl center sm:mb-5 mb-2" > Silver League</h3>
         <div className="">
