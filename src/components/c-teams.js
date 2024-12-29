@@ -1,34 +1,14 @@
-import { allHeros,  countersIndex } from "../data/heros-avatar/heros"
-
+import { countersIndex } from "../data/heros-avatar/heros"
 import { useEffect, useState } from "react"
-import AvatarHero, {makeString} from "./avatar-hero"
-import blank from "../data/heros-avatar/0000.png"
+import AvatarHero from "./avatar-hero"
 import HeroSelect, { findHeroObjectById } from "./hero-select"
 
-
-const findInHeros = (heroName) => {
-    const val = allHeros.filter(hero => hero.name === heroName)
-    return val[0] ? val[0].id : null
-}
-
-
+// const findInHeros = (heroName) => {
+//     const val = allHeros.filter(hero => hero.name === heroName)
+//     return val[0] ? val[0].id : null
+// }
 
 const CTeams = () => {
-    // const keyNames = Object.keys(counters);
-    // const newCounters = {}
-    // for (const key of keyNames) {
-    //     const value = findInHeros(key)
-    //     if (value !== null) {
-    //         const herosIndex = counters[key].map((heroName) => {
-    //             const valueOfHero = findInHeros(heroName)
-    //             if (valueOfHero !== null) {
-    //                 return valueOfHero
-    //             }
-    //         })
-    //         newCounters[value] = herosIndex
-    //     }
-    // }
-    // console.log(newCounters)
     const [heroIndex, setHeroIndex] = useState(0)
     const [counters, setCounters] = useState([])
     const [hero, setHero] = useState(null)
@@ -56,7 +36,7 @@ const CTeams = () => {
                         <p>Keep in mind that these are suggestions from HeroWarsCentral site.</p>
                         <p>If something is wrong, report it to discord channel!</p>
                     </div>
-                    <HeroSelect hIndex={heroIndex} setHeroIndex={setHeroIndex} hero={hero}/>
+                    <HeroSelect hIndex={heroIndex} setHeroIndex={setHeroIndex} hero={hero} />
                     <div className="mt-5">
                         {counters.length > 0 ? <div>Countered by these heros (best on the left): </div> : null}
                     </div>
@@ -76,16 +56,16 @@ const CTeams = () => {
 
 
 
-const AvatarPet = ({ pet }) => {
-    return (
-        <>
-            {pet ?
-                <div className="text-sm flex items-center mb-1">
-                    <img width={48} src={require('../data/pets-avatar/' + pet.name + '.png')} alt={pet.name} />
-                    <span className="font-semibold ml-2">{pet.id} - {pet.name}</span>
-                </div> : <img width={0} src={blank} alt="blank" />}
-        </>
-    )
+// const AvatarPet = ({ pet }) => {
+//     return (
+//         <>
+//             {pet ?
+//                 <div className="text-sm flex items-center mb-1">
+//                     <img width={48} src={require('../data/pets-avatar/' + pet.name + '.png')} alt={pet.name} />
+//                     <span className="font-semibold ml-2">{pet.id} - {pet.name}</span>
+//                 </div> : <img width={0} src={blank} alt="blank" />}
+//         </>
+//     )
 
-}
+// }
 export default CTeams

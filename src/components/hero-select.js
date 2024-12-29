@@ -1,5 +1,5 @@
 import { makeString } from "./avatar-hero"
-import { allHeros,  countersIndex } from "../data/heros-avatar/heros"
+import { allHeros   } from "../data/heros-avatar/heros"
 
 export const findHeroObjectById = (id) => {
     const val = allHeros.filter(hero => hero.id === Number(id))

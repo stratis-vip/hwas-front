@@ -1,15 +1,12 @@
 import { useEffect, useState } from "react"
 import AvatarHero from "./avatar-hero"
 import HeroSelect, { findHeroObjectById } from "./hero-select"
-import { countersIndex } from "../data/heros-avatar/heros"
-import { TfiEmail } from "react-icons/tfi"
+// import { countersIndex } from "../data/heros-avatar/heros"
 
 const Help = () => {
-
-
     const [team, setTeam] = useState([])
     const [heroIndex, setHeroIndex] = useState(0)
-    const [counters, setCounters] = useState([])
+    // const [counters, setCounters] = useState([])
     const [hero, setHero] = useState(null)
 
     const clearTeam = () => {
@@ -33,17 +30,16 @@ const Help = () => {
                 alert(hero.name + ' allready exists!')
             }
         }
-
     }
 
     useEffect(() => {
         if (heroIndex > 0) {
             const heroLocal = findHeroObjectById(heroIndex)
-            setCounters(countersIndex[heroIndex].map(idx => findHeroObjectById(idx)))
+            // setCounters(countersIndex[heroIndex].map(idx => findHeroObjectById(idx)))
             setHero(heroLocal)
         } else {
             console.log("set to zero")
-            setCounters([])
+            // setCounters([])
             setHero(null)
         }
     }, [heroIndex])
@@ -69,7 +65,6 @@ const Help = () => {
         </>
     )
 }
-
 
 const MyButton = ({ title, callback }) => {
     return (
