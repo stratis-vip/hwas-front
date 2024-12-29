@@ -9,7 +9,7 @@ export const findHeroObjectById = (id) => {
 const HeroSelect = ({hIndex, setHeroIndex, hero}) => {
 
     return (
-        <div className="mt-5 flex flex-row items-center">
+        <div className="flex flex-row items-center">
             <div>
                 <select className="block appearance-none  bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" value={hIndex} onChange={e => setHeroIndex(e.target.value)}>
                     <option value={0}> please choose a hero</option>

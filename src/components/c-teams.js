@@ -31,9 +31,10 @@ const CTeams = () => {
             <div className="flex flex-col">
                 <div>
                     <h1 className="text-3xl mt-5">Heros counters</h1>
-                    <div>
+                    <div className="my-2 mb-4">
                         <p>Choose an hero from the dropdown box, and you will see counter-heros for this one. </p>
-                        <p>Keep in mind that these are suggestions from HeroWarsCentral site.</p>
+                        <p>Keep in mind that these are suggestions from <a className="text-blue-500 font-extralight" rel="noreferrer" target="_blank" href="https://www.herowarscentral.com/post/top-5-counters-to-every-hero">HeroWarsCentral site</a>.</p>
+                        <p>Isaac, Julius and Polaris suggestions are from <a className="text-blue-500 font-extralight" rel="noreferrer" target="_blank" href="https://omg.rocks/hero-counters-hero-wars-dominion-era">omg.rocks site</a>.</p>
                         <p>If something is wrong, report it to discord channel!</p>
                     </div>
                     <HeroSelect hIndex={heroIndex} setHeroIndex={setHeroIndex} hero={hero} />
@@ -42,6 +43,9 @@ const CTeams = () => {
                     </div>
                 </div>
                 <div className="flex justify-between">
+                    {heroIndex > 0 && counters.length === 0 
+                    ? <span className="text-red-400 font-semibold">There is no known counter yet!</span>
+                    : null}
                     {counters.map(hero =>
                         <AvatarHero key={hero.id} hero={hero} />
                     )}

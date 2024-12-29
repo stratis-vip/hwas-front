@@ -816,7 +816,7 @@ export const allUsers = [
 		name: "Tobi",
 		active: true,
 		isArchived: false,
-		timeZone: "Etc/UTC",
+		timeZone: "UTC+7",
 		notes: null,
 		dates: {
 			joined: "20241212",

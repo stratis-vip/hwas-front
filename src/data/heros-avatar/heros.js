@@ -28,6 +28,7 @@ export const counters =
     "Heidi": ["Peppy", "Satori", "Yasmine", "Amira"],
     "Helios": ["Peppy", "Corvus", "Isaac", "Amira"],
     "Iris": ["Dante", "Judge", "Qing Mao", "Nebula", "Yasmine"],
+    "Isaac": [],
     "Ishmael": ["Krista", "Helios", "Arachne", "Dante", "Aurora"],
     "Jhu": ["Dante", "Martha", "Fafnir", "Aidan", "Mushy and Shroom"],
     "Jet": ["Arachne", "Peppy", "Yasmine", "Iris", "Helios", "Julius"],
@@ -398,6 +399,7 @@ export const countersIndex = {
         57,
         61
     ],
+    "52": [16, 3, 62, 28, 49],
     "53": [
         12,
         45,
@@ -454,6 +456,8 @@ export const countersIndex = {
         55,
         56
     ],
+    "61": [56, 52, 35, 40, 48],
+    "62": [45],
     "63": [
         16,
         12,
