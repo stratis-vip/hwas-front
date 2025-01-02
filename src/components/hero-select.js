@@ -1,12 +1,18 @@
 import { makeString } from "./avatar-hero"
-import { allHeros   } from "../data/heros-avatar/heros"
+import { allHeros } from "../data/heros-avatar/heros"
+import { allPets } from "../data/pets-avatar/pets"
 
 export const findHeroObjectById = (id) => {
     const val = allHeros.filter(hero => hero.id === Number(id))
     return val[0] ? val[0] : null
 }
 
-const HeroSelect = ({hIndex, setHeroIndex, hero}) => {
+export const findPetObjectById = (id) => {
+    const val = allPets.filter(pet => pet.id === Number(id))
+    return val[0] ? val[0] : null
+}
+
+const HeroSelect = ({ hIndex, setHeroIndex, hero }) => {
 
     return (
         <div className="flex flex-row items-center">

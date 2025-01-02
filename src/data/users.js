@@ -12,10 +12,14 @@ export const allUsers = [
 	{
 		id: 4246533,
 		name: "Leo",
-		active: true,
+		active: false,
 		isArchived: false,
 		timeZone: "UTC+8",
 		notes: null,
+		dates: {
+			joined: null,
+			left: "20241231" 
+		},
 	},
 	{
 		id: 4163442,
@@ -859,6 +863,18 @@ export const allUsers = [
 			left: null
 		},
 	},
+	{
+		id: 4337192,
+		name: "KVaKo",
+		active: true,
+		isArchived: false,
+		timeZone: "Etc/UTC",
+		notes: null,
+		dates: {
+			joined: "20241231",
+			left: null
+		},
+	}
 ];
 
 const sortF = (a, b) => {

@@ -2,6 +2,7 @@ import { countersIndex } from "../data/heros-avatar/heros"
 import { useEffect, useState } from "react"
 import AvatarHero from "./avatar-hero"
 import HeroSelect, { findHeroObjectById } from "./hero-select"
+import Battles from "./battles"
 
 // const findInHeros = (heroName) => {
 //     const val = allHeros.filter(hero => hero.name === heroName)
@@ -27,10 +28,10 @@ const CTeams = () => {
     }, [heroIndex])
 
     return <>
-        <div className="flex justify-center">
+        <div className="flex flex-col items-center ">
             <div className="flex flex-col">
                 <div>
-                    <h1 className="text-3xl mt-5">Heros counters</h1>
+                    <h1 className="text-3xl mt-5 text-4xl font-extrabold">Heros counters</h1>
                     <div className="my-2 mb-4">
                         <p>Choose an hero from the dropdown box, and you will see counter-heros for this one. </p>
                         <p>Keep in mind that these are suggestions from <a className="text-blue-500 font-extralight" rel="noreferrer" target="_blank" href="https://www.herowarscentral.com/post/top-5-counters-to-every-hero">HeroWarsCentral site</a>.</p>
@@ -43,9 +44,9 @@ const CTeams = () => {
                     </div>
                 </div>
                 <div className="flex justify-between">
-                    {heroIndex > 0 && counters.length === 0 
-                    ? <span className="text-red-400 font-semibold">There is no known counter yet!</span>
-                    : null}
+                    {heroIndex > 0 && counters.length === 0
+                        ? <span className="text-red-400 font-semibold">There is no known counter yet!</span>
+                        : null}
                     {counters.map(hero =>
                         <AvatarHero key={hero.id} hero={hero} />
                     )}
@@ -53,6 +54,7 @@ const CTeams = () => {
 
 
             </div>
+            <Battles />
         </div>
     </>
 }

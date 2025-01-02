@@ -1,42 +1,57 @@
 export const allPets = [
     {
+        id: 0,
+        name: "No Pet",
+        short: "###"
+    },
+    {
         id: 1,
-        name: "Albus"
+        name: "Albus",
+        short: "Alb"
     },
     {
         id: 2,
-        name: "Axel"
+        name: "Axel",
+        short: "Axe"
     },
     {
         id: 3,
-        name: "Biscuit"
+        name: "Biscuit",
+        short: "Bis"
     },
     {
         id: 4,
-        name: "Cain"
+        name: "Cain",
+        short: "Cai"
     },
     {
         id: 5,
-        name: "Fenris"
+        name: "Fenris",
+        short: "Fen"
     },
     {
         id: 6,
-        name: "Khorus"
+        name: "Khorus",
+        short: "Kho"
     },
     {
         id: 7,
-        name: "Mara"
+        name: "Mara",
+        short: "Mar"
     },
     {
         id: 8,
-        name: "Merlin"
+        name: "Merlin",
+        short: "Mer"
     },
     {
         id: 9,
-        name: "Oliver"
+        name: "Oliver",
+        short: "Oli"
     },
     {
         id: 10,
-        name: "Vex"
+        name: "Vex",
+        short: "Vex"
     },
 ]

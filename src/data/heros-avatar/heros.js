@@ -485,248 +485,313 @@ export const countersIndex = {
 export const allHeros = [
     {
         id: 1,
-        name: "Aurora"
+        name: "Aurora",
+        short: "Aur"
     },
     {
         id: 2,
-        name: "Galahad"
+        name: "Galahad",
+        short: "Gal"
     },
     {
         id: 3,
-        name: "Keira"
+        name: "Keira",
+        short: "Kei"
     },
     {
         id: 4,
-        name: "Astaroth"
+        name: "Astaroth",
+        short: "Ast"
     },
     {
         id: 5,
-        name: "Kai"
+        name: "Kai",
+        short: "Kai"
     },
     {
         id: 6,
-        name: "Phobos"
+        name: "Phobos",
+        short: "Pho"
     },
     {
         id: 7,
-        name: "Thea"
+        name: "Thea",
+        short: "The"
     }, {
         id: 8,
-        name: "Daredevil"
+        name: "Daredevil",
+        short: "Dd"
     }, {
         id: 9,
-        name: "Heidi"
+        name: "Heidi",
+        short: "Hei"
     }, {
         id: 10,
-        name: "Faceless"
+        name: "Faceless",
+        short: "Fac"
     }, {
         id: 11,
-        name: "Chabba"
+        name: "Chabba",
+        short: "Cha"
     }, {
         id: 12,
-        name: "Arachne"
+        name: "Arachne",
+        short: "Ara"
     }, {
         id: 13,
-        name: "Orion"
+        name: "Orion",
+        short: "Ori"
     }, {
         id: 14,
-        name: "Fox"
+        name: "Fox",
+        short: "Fox"
     }, {
         id: 15,
-        name: "Ginger"
+        name: "Ginger",
+        short: "Gin"
     }, {
         id: 16,
-        name: "Dante"
+        name: "Dante",
+        short: "Dan"
     }, {
         id: 17,
-        name: "Mojo"
+        name: "Mojo",
+        short: "Moj"
     }, {
         id: 18,
-        name: "Judge"
+        name: "Judge",
+        short: "Jud"
     }, {
         id: 19,
-        name: "Dark Star"
+        name: "Dark Star",
+        short: "Drk"
     }, {
         id: 20,
-        name: "Artemis"
+        name: "Artemis",
+        short: "Art"
     },
     {
         id: 21,
-        name: "Markus"
+        name: "Markus",
+        short: "Mrk"
     }, {
         id: 22,
-        name: "Peppy"
+        name: "Peppy",
+        short: "Pep"
     },
     {
         id: 23,
-        name: "Lian"
+        name: "Lian",
+        short: "Lia"
     },
     {
         id: 24,
-        name: "Cleaver"
+        name: "Cleaver",
+        short: "Cle"
     },
     {
         id: 25,
-        name: "Ishmael"
+        name: "Ishmael",
+        short: "Ish"
     },
     {
         id: 26,
-        name: "Lilith"
+        name: "Lilith",
+        short: "Lil"
     },
     {
         id: 27,
-        name: "Luther"
+        name: "Luther",
+        short: "Lut"
     },
     {
         id: 28,
-        name: "Qing Mao"
+        name: "Qing Mao",
+        short: "Qin"
     },
     {
         id: 29,
-        name: "Dorian"
+        name: "Dorian",
+        short: "Dor"
     },
     {
         id: 30,
-        name: "Cornelius"
+        name: "Cornelius",
+        short: "Krn"
     },
     {
         id: 31,
-        name: "Jet"
+        name: "Jet",
+        short: "Jet"
     },
     {
         id: 32,
-        name: "Helios"
+        name: "Helios",
+        short: "Hel"
     },
     {
         id: 33,
-        name: "Lars"
+        name: "Lars",
+        short: "Lrs"
     },
     {
         id: 34,
-        name: "Krista"
+        name: "Krista",
+        short: "Kri"
     },
     {
         id: 35,
-        name: "Jorgen"
+        name: "Jorgen",
+        short: "Jor"
     },
     {
         id: 36,
-        name: "Maya"
+        name: "Maya",
+        short: "May"
     },
     {
         id: 37,
-        name: "Jhu"
+        name: "Jhu",
+        short: "Jhu"
     },
     {
         id: 38,
-        name: "Elimir"
+        name: "Elmir",
+        short: "Elm"
     },
     {
         id: 39,
-        name: "Ziri"
+        name: "Ziri",
+        short: "Zir"
     },
     {
         id: 40,
-        name: "Nebula"
+        name: "Nebula",
+        short: "Neb"
     },
     {
         id: 41,
-        name: "K'arkh"
+        name: "K'arkh",
+        short: "K'A"
     },
     {
         id: 42,
-        name: "Rufus"
+        name: "Rufus",
+        short: "Ruf"
     },
     {
         id: 43,
-        name: "Celeste"
+        name: "Celeste",
+        short: "Cel"
     },
     {
         id: 44,
-        name: "Astrid and Lucas"
+        name: "Astrid and Lucas",
+        short: "A&L"
     },
     {
         id: 45,
-        name: "Satori"
+        name: "Satori",
+        short: "Sat"
     },
     {
         id: 46,
-        name: "Martha"
+        name: "Martha",
+        short: "Mar"
     },
     {
         id: 47,
-        name: "Andvari"
+        name: "Andvari",
+        short: "And"
     },
     {
         id: 48,
-        name: "Sebastian"
+        name: "Sebastian",
+        short: "Seb"
     },
     {
         id: 49,
-        name: "Yasmine"
+        name: "Yasmine",
+        short: "Yas"
     },
     {
         id: 50,
-        name: "Corvus"
+        name: "Corvus",
+        short: 'Krv'
     },
     {
         id: 51,
-        name: "Morrigan"
+        name: "Morrigan",
+        short: "Mor"
     },
     {
         id: 52,
-        name: "Isaac"
+        name: "Isaac",
+        short: "Isa"
     },
     {
         id: 53,
-        name: "Alvanor"
+        name: "Alvanor",
+        short: "Alv"
     },
     {
         id: 54,
-        name: "Tristan"
+        name: "Tristan",
+        short: "Tri"
     },
     {
         id: 55,
-        name: "Iris"
+        name: "Iris",
+        short: "Iri"
     },
     {
         id: 56,
-        name: "Amira"
+        name: "Amira",
+        short: "Ami"
     },
     {
         id: 57,
-        name: "Fafnir"
+        name: "Fafnir",
+        short: "Faf"
     },
     {
         id: 58,
-        name: "Aidan"
+        name: "Aidan",
+        short: "Aid"
     },
     {
         id: 59,
-        name: "Kayla"
+        name: "Kayla",
+        short: "Kay"
     },
     {
         id: 60,
-        name: "Mushy and Shroom"
+        name: "Mushy and Shroom",
+        short: "Mus"
     },
     {
         id: 61,
-        name: "Julius"
+        name: "Julius",
+        short: "Jul"
     },
     {
         id: 62,
-        name: "Polaris"
+        name: "Polaris",
+        short: "Pol"
     },
     {
         id: 63,
-        name: "Lara Croft"
+        name: "Lara Croft",
+        short: "LaC"
     },
     {
         id: 64,
-        name: "Augustus"
+        name: "Augustus",
+        short: "Aug"
     },
     {
         id: 65,
-        name: "Ninja Turtles"
+        name: "Ninja Turtles",
+        short: "Nin"
     }
 ].sort((a, b) => { return a.name.toLowerCase().localeCompare(b.name.toLowerCase()) })
