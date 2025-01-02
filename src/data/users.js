@@ -18,7 +18,7 @@ export const allUsers = [
 		notes: null,
 		dates: {
 			joined: null,
-			left: "20241231" 
+			left: "20241231"
 		},
 	},
 	{
@@ -805,13 +805,13 @@ export const allUsers = [
 	{
 		id: 41718878,
 		name: "Reuert",
-		active: true,
+		active: false,
 		isArchived: false,
 		timeZone: "UTC+2",
 		notes: null,
 		dates: {
 			joined: "20241004",
-			left: null
+			left: "20250102"
 		},
 
 	},
