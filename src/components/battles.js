@@ -16,6 +16,7 @@ const Battles = () => {
     const [filter, setFilter] = useState({ att: { name: null, team: null }, def: { name: null, team: null } })
     const [isFiltered, setIsFiltered] = useState(false)
     const [correctInput, setCorrectInput] = useState({ att: { name: false, team: false } })
+    const [hide, setHide] = useState(false)
 
 
 
@@ -42,7 +43,15 @@ const Battles = () => {
     /////////////////////////////////////////////////////////////////
 
     useEffect(() => {
-        if (dt) { console.log('Date chnged to ', dt) }
+        if (dt) {
+            if (correctInput.att.name === true) {
+                debugger
+                handleAttackerNameChange(filter.att.name)
+            }
+
+            console.log('Date chnged to ', dt)
+        }
+        // eslint-disable-next-line
     }, [dt])
 
     useEffect(() => {
@@ -114,55 +123,62 @@ const Battles = () => {
 
     return (
         <div>
-            <div className="text-center text-4xl font-extrabold">Find Battles WON by our mates</div>
-            <h1 className="text-2xl">Instructions</h1>
-            <p className="mb-1">Set the date you want to check from! System automaticaly set 5 days before.</p>
-            <p className="mb-1">Complete filters if you want to get results for certain user or team Line up. Whern a flter is entered correct, text is turn to green! </p>
-            <p className="mb-1"><span className="font-semibold italic">Attacker</span> and <span className="font-semibold italic">Defender</span> texts is reffering to user name (for example stratis - case insensitive)</p>
-            <p className="mb-1"><span className="font-semibold italic">Attacker</span> and <span className="font-semibold italic">Defender team</span> texts is reffering to heros. Heros must entered by 3first digits.</p>
-            <p className="text-red-400 text-center font-extrabold text-3xl">Only attacker filter is working right now!!!! </p>
-
-
-            <div className="flex items-center  my-2 justify-center mt-4">
-                <label className="" htmlFor="fromDate">Search Battles from: </label>
-                <input className="border rounded-lg px-2 py-1 mx-2" value={dt} type="date" onChange={onChangeDate} />
-                <span>{battleObject.length > 0 ? battleObject.length + " battles won" : "no battles recorded"}</span>
-            </div>
-
-            <div className="flex justify-around items-center">
-                <h1>Filters</h1>
-                <div className="flex w-5/6 justify-around">
-                    <div className="flex flex-col w-1/2">
-                        <label htmlFor="attacker">Attacker</label>
-                        <div className={correctInput.att.name === true ? "text-green-600" : "text-red-600"}>
-                            <input className="border rounded-lg px-2 py-1  w-2/3" id="attacker" type="text" placeholder="attacker name"
-                                value={filter.att?.name !== null ? filter.att?.name : ""} onChange={e => handleAttackerNameChange(e.currentTarget.value)} />
-                        </div>
-                        <label className="mt-2" htmlFor="attTeam">Attacker Team</label>
-                        <input className="border rounded-lg px-2 py-1 w-[95%]" id="attTeam" type="attTeam" placeholder="attacker team"
-                            value={filter.att?.team !== null ? filter.att?.name : ""} onChange={e => setFilter({ ...filter, att: { ...filter.att, team: e.currentTarget.value } })} />
-                    </div>
-                    <div className="flex flex-col w-1/2">
-                        <label htmlFor="defender">Defender</label>
-                        <input className="border rounded-lg px-2 py-1 w-2/3" id="defender" type="text" placeholder="defender name"
-                            value={filter.def?.name !== null ? filter.def?.name : ""} onChange={e => setFilter({ ...filter, def: { ...filter.def, name: e.currentTarget.value } })} />
-                        <label className="mt-2" htmlFor="defTeam">Defender Team</label>
-                        <input className="border rounded-lg px-2 py-1 w-[95%]" id="defeTeam" type="attTeam" placeholder="defender team"
-                            value={filter.def?.team !== null ? filter.def?.name : ""} onChange={e => setFilter({ ...filter, def: { ...filter.def, team: e.currentTarget.value } })} />
-                    </div>
+            <div className="flex justify-center ">
+                <div className="text-4xl font-extrabold">Find Battles WON by our mates</div>
+                <div className="ml-3 flex  items-end cursor-pointer text-lg text-blue-500" onClick={e => setHide(h => !h)}>
+                    <h1>{hide === true ? "Show battles" : "Hide battles"} </h1>
                 </div>
             </div>
-            <div class="inline-flex items-center justify-center w-full">
-                <hr class="w-64 h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
-                <span class="absolute px-3 font-medium text-gray-900 -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900">results </span>
-            </div>
-            <div className="flex">
-                <div className="mr-5 pr-12 border-black border-r-4">{battleObject.map((bat, idx) => {
-                    return <Team key={idx} parentTeam={bat.attacker} />
-                })}</div>
-                <div>{battleObject.map((bat, idx) => {
-                    return <Team key={idx} parentTeam={bat.defender} />
-                })}</div>
+            <div hidden={hide}>
+                <h1 className="text-2xl">Instructions</h1>
+                <p className="mb-1">Set the date you want to check from! System automaticaly set 5 days before.</p>
+                <p className="mb-1">Complete filters if you want to get results for certain user or team Line up. Whern a flter is entered correct, text is turn to green! </p>
+                <p className="mb-1"><span className="font-semibold italic">Attacker</span> and <span className="font-semibold italic">Defender</span> texts is reffering to user name (for example stratis - case insensitive)</p>
+                <p className="mb-1"><span className="font-semibold italic">Attacker</span> and <span className="font-semibold italic">Defender team</span> texts is reffering to heros. Heros must entered by 3first digits.</p>
+                <p className="text-red-400 text-center font-extrabold text-3xl">Only attacker filter is working right now!!!! </p>
+
+
+                <div className="flex items-center  my-2 justify-center mt-4">
+                    <label className="" htmlFor="fromDate">Search Battles from: </label>
+                    <input className="border rounded-lg px-2 py-1 mx-2" value={dt} type="date" onChange={onChangeDate} />
+                    <span>{battleObject.length > 0 ? battleObject.length + " battles won" : "no battles recorded"}</span>
+                </div>
+
+                <div className="flex justify-around items-center">
+                    <h1>Filters</h1>
+                    <div className="flex w-5/6 justify-around">
+                        <div className="flex flex-col w-1/2">
+                            <label htmlFor="attacker">Attacker</label>
+                            <div className={correctInput.att.name === true ? "text-green-600" : "text-red-600"}>
+                                <input className="border rounded-lg px-2 py-1  w-2/3" id="attacker" type="text" placeholder="attacker name"
+                                    value={filter.att?.name !== null ? filter.att?.name : ""} onChange={e => handleAttackerNameChange(e.currentTarget.value)} />
+                            </div>
+                            <label className="mt-2" htmlFor="attTeam">Attacker Team</label>
+                            <input className="border rounded-lg px-2 py-1 w-[95%]" id="attTeam" type="attTeam" placeholder="attacker team"
+                                value={filter.att?.team !== null ? filter.att?.name : ""} onChange={e => setFilter({ ...filter, att: { ...filter.att, team: e.currentTarget.value } })} />
+                        </div>
+                        <div className="flex flex-col w-1/2">
+                            <label htmlFor="defender">Defender</label>
+                            <input className="border rounded-lg px-2 py-1 w-2/3" id="defender" type="text" placeholder="defender name"
+                                value={filter.def?.name !== null ? filter.def?.name : ""} onChange={e => setFilter({ ...filter, def: { ...filter.def, name: e.currentTarget.value } })} />
+                            <label className="mt-2" htmlFor="defTeam">Defender Team</label>
+                            <input className="border rounded-lg px-2 py-1 w-[95%]" id="defeTeam" type="attTeam" placeholder="defender team"
+                                value={filter.def?.team !== null ? filter.def?.name : ""} onChange={e => setFilter({ ...filter, def: { ...filter.def, team: e.currentTarget.value } })} />
+                        </div>
+                    </div>
+                </div>
+                <div class="inline-flex items-center justify-center w-full">
+                    <hr class="w-64 h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+                    <span class="absolute px-3 font-medium text-gray-900 -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900">results </span>
+                </div>
+                <div className="flex">
+                    <div className="mr-5 pr-12 border-black border-r-4">{battleObject.map((bat, idx) => {
+                        return <Team key={idx} parentTeam={bat.attacker} />
+                    })}</div>
+                    <div>{battleObject.map((bat, idx) => {
+                        return <Team key={idx} parentTeam={bat.defender} />
+                    })}</div>
+                </div>
             </div>
         </div>
     )
