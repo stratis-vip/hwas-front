@@ -29,7 +29,7 @@ export const getFromDate = (date, include = true) => {
     } else {
         ar = dates.filter(d => Number(d) > Number(toDate))
     }
-    let battleCounter = 0
+    // let battleCounter = 0
 
     for (const a of ar) {
         const battlesOfDay = results[a]
@@ -43,7 +43,7 @@ export const getFromDate = (date, include = true) => {
         for (const battle of tempBattles) {
             ret.push(battle)
         }
-        battleCounter += results[a].length
+        // battleCounter += results[a].length
     }
     // console.log(toDate)
 

@@ -1,0 +1,1 @@
+when date is change and there is an active filter, the results are not refreshing. 
